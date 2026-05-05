@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main id="app">
+    <div id="controls">
+      <input id="query" type="search" inputmode="search" placeholder="Type something (e.g. Eiffel Tower)" aria-label="Search" />
+      <button id="go" aria-label="Search button">Enter</button>
+    </div>
+
+    <div id="result" aria-live="polite">
+      <div id="placeholder">
+        <div class="hint">Type a topic and press Enter</div>
+      </div>
+      <div id="card" hidden>
+        <img id="result-image" alt="" />
+        <div id="content">
+          <h2 id="title"></h2>
+          <p id="extract"></p>
+          <a id="readmore" target="_blank" rel="noopener">Read on Wikipedia</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="spinner" hidden aria-hidden="true"></div>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
